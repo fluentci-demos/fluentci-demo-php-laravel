@@ -2,7 +2,7 @@
 name = "Start MariaDB"
 command = ["fluentci run --wasm mariadb start"]
 env = [
-    "MARIADN_USER=user",
+    "MARIADB_USER=user",
     "MARIADB_PASSWORD=password",
     "MARIADB_DATABASE=laravel",
 ]
