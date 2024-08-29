@@ -1,0 +1,17 @@
+[[steps]]
+name = "Start MariaDB"
+command = ["fluentci run --wasm mariadb start"]
+env = [
+    "MARIADN_USER=user",
+    "MARIADB_PASSWORD=password",
+    "MARIADB_DATABASE=laravel",
+]
+
+[[steps]]
+name = "Run tests"
+command = ["fluentci run --wasm laravel test"]
+env = [
+    "MARIADB_DATABASE=laravel",
+    "MARIADB_USER=user",
+    "MARIADB_PASSWORD=password",
+]
